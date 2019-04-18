@@ -1,20 +1,17 @@
- function TextMessage(Message){
-    const responseBody = {
-        version: "2.0",
-        template: {
-            outputs: [
-                {
-                    simpleText:{
-                        text: Message
-                    }
-                }
-            ]
+const TextMessage =  (Message) => {
+  const responseBody = {
+    version: '2.0',
+    template: {
+      outputs: [
+        {
+          simpleText: {
+            text: Message
+          }
         }
-    };
-    return responseBody;
-
+      ]
+    }
+  }
+  return responseBody
 }
 
-
-
-module.exports = TextMessage;
+export { TextMessage  }
